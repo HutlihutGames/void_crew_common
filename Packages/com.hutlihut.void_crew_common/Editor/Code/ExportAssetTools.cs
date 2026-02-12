@@ -5,9 +5,10 @@ using UnityEngine;
 
 namespace VC.Common.Editor
 {
-
     public class ExportAssetTools
     {
+        private const string OUTPUT_PATH = "Exported Assets";
+
         [MenuItem("Void Crew/Export Selected")]
         static void BuildBundles()
         {
@@ -34,8 +35,6 @@ namespace VC.Common.Editor
 
             var name = path.Substring(path.LastIndexOf('/') + 1);
 
-            Debug.Log($"Exporting {name}");
-
             List<AssetBundleBuild> assetBundleDefinitionList = new();
 
             var files = RecursiveGetAllAssetsInDirectory(path);
@@ -50,6 +49,7 @@ namespace VC.Common.Editor
                     vcAssetsFound = true;
                     var guid = AssetDatabase.GUIDFromAssetPath(file);
                     vcAsset.SetAssetGUID(guid.ToString());
+                    Debug.Log($"{vcAsset} assigned GUID: {guid}");
                     EditorUtility.SetDirty(vcAsset);
                     AssetDatabase.SaveAssetIfDirty(guid);
                 }
@@ -66,15 +66,14 @@ namespace VC.Common.Editor
             ab.assetNames = files.ToArray();
             assetBundleDefinitionList.Add(ab);
 
-            string outputPath = "Exported Assets";
-            if (!Directory.Exists(outputPath))
-                Directory.CreateDirectory(outputPath);
+            if (!Directory.Exists(OUTPUT_PATH))
+                Directory.CreateDirectory(OUTPUT_PATH);
 
             Debug.Log($"Exporting files:\n{string.Join("\n", files)}");
 
             BuildAssetBundlesParameters buildInput = new()
             {
-                outputPath = outputPath,
+                outputPath = OUTPUT_PATH,
                 options = BuildAssetBundleOptions.AssetBundleStripUnityVersion,
                 bundleDefinitions = assetBundleDefinitionList.ToArray()
             };
@@ -85,8 +84,7 @@ namespace VC.Common.Editor
                 foreach (var bundleName in manifest.GetAllAssetBundles())
                 {
                     string projectRelativePath = buildInput.outputPath + "/" + bundleName;
-                    Debug.Log(
-                        $"Size of AssetBundle {projectRelativePath} is {new FileInfo(projectRelativePath).Length}");
+                    Debug.Log($"Exported AssetBundle: {projectRelativePath}");
                 }
             }
             else
