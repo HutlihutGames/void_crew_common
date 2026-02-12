@@ -6,5 +6,6 @@ namespace VC.Common.Carryables
     {
         public Collider OverrideCollider;
         public Renderer OverrideRenderer;
+        public AudioClip OverrideImpactAudio;
     }
 }
