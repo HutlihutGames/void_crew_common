@@ -1,7 +1,9 @@
 {
     "name": "VoidCrewCommonEditor",
     "rootNamespace": "VC.Common.Editor",
-    "references": [],
+    "references": [
+        "GUID:efa02d9cc0d417b4eb98624a2b1e2bcc"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
