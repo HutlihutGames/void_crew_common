@@ -40,6 +40,8 @@ namespace VC.Common
         public LootRarity Rarity;
     }
 
+    [DisallowMultipleComponent]
+    [RequireComponent(typeof(VoidCrewAsset))]
     public class LootTableItem : MonoBehaviour
     {
         public SectorCompletionReward[] SectorCompletionReward;
