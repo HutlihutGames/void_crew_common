@@ -4,7 +4,7 @@ namespace VC.Common.Carryables
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(VoidCrewAsset))]
-    public class CarryableObjectAsset : MonoBehaviour
+    public class CarryableBaseAsset : MonoBehaviour
     {
         public Sprite Icon;
         

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using VC.Common.CoreData;
 
 namespace VC.Common
@@ -31,6 +32,6 @@ namespace VC.Common
     public class LootTableItem : MonoBehaviour
     {
         public SectorCompletionReward[] SectorCompletionReward;
-        public DropTableEntry[] EnemyKillReward;
+        [FormerlySerializedAs("EnemyKillReward")] public DropTableEntry[] DropTableEntries;
     }
 }

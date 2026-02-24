@@ -5,12 +5,12 @@ using VC.Common.CoreData;
 
 namespace VC.Common.Editor
 {
-    public class ShowStatsWindow : EditorWindow
+    public class StatsWindow : EditorWindow
     {
         [MenuItem("Void Crew/Stat table")]
         static void Init()
         {
-            ShowStatsWindow window = (ShowStatsWindow) GetWindow(typeof(ShowStatsWindow));
+            StatsWindow window = (StatsWindow) GetWindow(typeof(StatsWindow));
             window.name = "Stat table";
             window.Show();
         }
@@ -18,11 +18,8 @@ namespace VC.Common.Editor
         private void CreateGUI()
         {
             VisualElement root = rootVisualElement;
-            Label label = new Label("Stats table");
-            root.Add(label);
 
-
-            var data = ModStatType.GetAllStatTypes();
+            var data = ModStatID.GetAllStatTypes();
             
             root.style.flexGrow = 1;
             

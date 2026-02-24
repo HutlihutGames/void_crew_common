@@ -1,20 +1,17 @@
-using System;
 using UnityEngine;
 
 namespace VC.Common.Carryables
 {
     [DisallowMultipleComponent]
     [RequireComponent(typeof(VoidCrewAsset))]
-    public class ModObjectAsset : CarryableObjectAsset
+    public class CarryableStatModAsset : CarryableBaseAsset
     {
         public bool IsRelic;
-        public string StatMods;
+        [TextAreaAttribute(3, 40)] public string StatModsDescription;
 
         private void Reset()
         {
-            StatMods = "{" +
-                       "" +
-                       "}";
+            StatModsDescription = "{\n  \"modifiers\": []\n}";
         }
     }
 }
