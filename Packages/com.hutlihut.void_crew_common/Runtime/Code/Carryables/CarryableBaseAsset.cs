@@ -6,8 +6,6 @@ namespace VC.Common.Carryables
     [RequireComponent(typeof(VoidCrewAsset))]
     public class CarryableBaseAsset : MonoBehaviour
     {
-        public Sprite Icon;
-        
         public Collider OverrideCollider;
         public Renderer OverrideRenderer;
         public AudioClip OverrideImpactAudio;
