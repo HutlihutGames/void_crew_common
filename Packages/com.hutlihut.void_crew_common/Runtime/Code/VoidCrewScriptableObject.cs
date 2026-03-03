@@ -2,8 +2,7 @@ using UnityEngine;
 
 namespace VC.Common
 {
-    [DisallowMultipleComponent]
-    public class VoidCrewAsset : MonoBehaviour
+    public class VoidCrewScriptableObject : ScriptableObject
     {
         [SerializeField] [HideInInspector] private string assetGuid;
         public string AssetGuid => assetGuid;

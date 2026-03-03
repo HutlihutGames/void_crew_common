@@ -52,6 +52,18 @@ namespace VC.Common.Editor
                     Debug.Log($"{vcAsset} assigned GUID: {guid}");
                     EditorUtility.SetDirty(vcAsset);
                     AssetDatabase.SaveAssetIfDirty(guid);
+                    continue;
+                }
+                var vcso = AssetDatabase.LoadAssetAtPath<VoidCrewScriptableObject>(file);
+                if (vcso)
+                {
+                    vcAssetsFound = true;
+                    var guid = AssetDatabase.GUIDFromAssetPath(file);
+                    vcso.SetAssetGUID(guid.ToString());
+                    Debug.Log($"{vcso} assigned GUID: {guid}");
+                    EditorUtility.SetDirty(vcso);
+                    AssetDatabase.SaveAssetIfDirty(guid);
+                    continue;
                 }
             }
 
