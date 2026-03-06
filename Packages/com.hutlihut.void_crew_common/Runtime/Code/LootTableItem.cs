@@ -19,7 +19,6 @@ namespace VC.Common
     [Serializable]
     public class DropTableEntry
     {
-        [Min(1)] public int Weight = 1;
         [Min(1)] public int Amount = 1;
         public LootRarities Rarity = LootRarities.Common;
         public LootSpawnLocationType LocationType = LootSpawnLocationType.Floating;
