@@ -1,12 +1,15 @@
 Void Crew Modding Policy
 
-Last updated: [7. March 2026] Version 1.06
+
+Last updated: [9. March 2026] Version 1.07
 
 Void Crew supports a creative modding community and encourages players to experiment and build new gameplay experiences.
 Mods are created by the community and are not officially supported nor official Void Crew content. Hutlihut Games does not review, endorse, or guarantee the safety, stability, or functionality of third‑party Mods.
 Players install and use Mods at their own risk.
 
+
 Purpose
+
 This document describes the rules for creating, distributing, and using Mods for Void Crew.
 These guidelines aim to support a healthy modding ecosystem while protecting the integrity of the game and the rights of Hutlihut Games and Focus Entertainment.
 
@@ -16,6 +19,7 @@ All Mods must comply with:
  • Applicable platform rules (such as Thunderstore)
 
 If there is a conflict between these guidelines and the EULA, the EULA takes precedence.
+
 
 What is a Mod
 
@@ -31,17 +35,23 @@ Mods may interact with the game but do not grant ownership of Void Crew assets o
 Mods may use Void Crew assets only within the game environment.
 
 Redistribution of Void Crew assets outside the game is not permitted.
+
+
 Multiplayer Mod Categories
 
 To help players understand the impact of Mods on gameplay, Mods may be categorized depending on their gameplay impact.
-Verified Mods - TBD
-Cosmetic or quality‑of‑life changes that do not affect gameplay balance.
-Approved Mods - TBD
-Gameplay‑altering Mods that are intended to work in modded multiplayer sessions.
-Sandbox Mods - TBD
 
+Cosmetic mods
+Cosmetic or quality‑of‑life changes that do not affect gameplay balance.
+
+Gameplay altering mode
+Gameplay‑altering Mods that are intended to work in modded multiplayer sessions.
+
+Progression altering mods
 Mods that significantly alter gameplay systems and may require separate progression environments or save states.
-Sessions using gameplay‑altering Mods may be marked as modded. Players joining such sessions may be required to install the same Mods to ensure compatibility.
+
+Sessions using gameplay and progression altering Mods may be marked as modded. Players joining such sessions may be required to install the same Mods to ensure compatibility.
+
 
 Intellectual Property
 
@@ -51,6 +61,7 @@ Redistribution of Void Crew assets outside the game is not permitted.
 Additional legal terms regarding Mods may be defined in the Void Crew End User License Agreement (EULA).
 By distributing a Mod for Void Crew, the creator grants Hutlihut Games and Focus Entertainment a worldwide, royalty‑free, non‑exclusive, irrevocable license to host, display, distribute, archive, review, and remove the Mod as necessary to operate the game and its community services.
 The Void Crew Modding Documentation is licensed separately under the Void Crew Modding Documentation License.
+
 
 Disallowed Mods
 
@@ -64,11 +75,13 @@ Redistribute Void Crew assets outside the game
 Infringe third‑party intellectual property rights 
 Intentionally disrupt gameplay stability or security
 
+
 Distribution
 
 Mods are commonly distributed through community platforms such as Thunderstore (https://thunderstore.io) or similar repositories.
 Hutlihut Games does not operate or control these platforms and assumes no responsibility for their operation, moderation, or security.
 Mod creators must comply with the platform’s terms of service.
+
 
 Monetization
 
@@ -86,6 +99,7 @@ Mods may not be marketed as official Void Crew products or expansions.
 The Void Crew name may only be used to indicate compatibility with the game.
 Use of official logos, artwork, or trademarks requires permission from Hutlihut Games.
 
+
 Updates and Compatibility
 
 Game updates may change systems, APIs, or game balance.
@@ -98,6 +112,7 @@ Do not collect any identifiable or other data through your Mod. Even if your dat
 
 If you would like to collect some general stats for your Mod using non-identifiable data collection methods then please contact us. But understand that it is very unlikely we will provide any exceptions to this rule. Do not just collect data from users using your mod in Void Crew.
 
+
 Prohibited Content
 
 Mods must not contain malware, spyware, cryptocurrency mining software, unauthorized telemetry, external executables, or unauthorized network communication.
@@ -109,6 +124,7 @@ Players joining modded sessions may be required to install the same Mods.
 Mods that significantly alter progression systems may require separate save states or sandbox environments.
 Disputes between Mod creators are the responsibility of the creators and hosting platforms.
 Mods distributed through community platforms must follow versioning and dependency requirements to ensure multiplayer compatibility.
+
 
 Enforcement
 
@@ -126,4 +142,5 @@ Hutlihut Games and Focus Entertainment assume no liability for user‑generated 
 Players use Mods at their own risk.
 Use them responsibly and have fun experimenting.
 
-The Modding Policy will be updated from time to time; version 1.06, 7. March 2026.
+
+The Modding Policy will be updated from time to time; version 1.07, 9. March 2026.
