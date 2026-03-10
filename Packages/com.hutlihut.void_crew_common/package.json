@@ -4,10 +4,14 @@
   "displayName": "void_crew_common",
   "description": "Shared library for Void Crew mods",
   "keywords": [],
+  "unity": "2022.3",
   "author": {
     "name": "Krstjns",
     "email": "kris@hutlihut.dk",
     "url": ""
+  },
+  "dependencies": {
+    "com.unity.render-pipelines.high-definition": "14.0.12"
   },
   "hideInEditor": false
 }
