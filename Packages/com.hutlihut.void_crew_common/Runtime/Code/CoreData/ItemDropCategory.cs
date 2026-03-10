@@ -18,6 +18,7 @@ namespace VC.Common.CoreData
         ContainerSalvage = 1 << 10,
         ContainerSupplies = 1 << 11,
         ContainerTech = 1 << 12,
+        Desecration = 1 << 13,
         AllContainers = ContainerSalvage | ContainerSupplies | ContainerTech,
         AllOnDeath = OnDeathPilgrimage | OnDeathSurvivor01 | OnDeathSurvivor23 | OnDeathSurvivor45,
         AllWrecks = Wreck_Ambush | Wreck_Generic | Wreck_METEM,
