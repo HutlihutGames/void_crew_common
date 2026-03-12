@@ -8,6 +8,21 @@ namespace VC.Common.Carryables
     {
         public Collider OverrideCollider;
         public Renderer OverrideRenderer;
-        public AudioClip OverrideImpactAudio;
+        public AudioClip[] OverrideImpactAudio;
+
+        private VoidCrewAsset _voidCrewAsset;
+
+        public VoidCrewAsset VoidCrewAsset
+        {
+            get
+            {
+                if (_voidCrewAsset == null)
+                {
+                    _voidCrewAsset = GetComponent<VoidCrewAsset>();
+                }
+
+                return _voidCrewAsset;
+            }
+        }
     }
 }
