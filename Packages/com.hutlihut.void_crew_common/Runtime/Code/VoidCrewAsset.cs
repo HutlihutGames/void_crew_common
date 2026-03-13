@@ -9,7 +9,7 @@ namespace VC.Common
         public string AssetGuid => assetGuid;
 
         public string Name;
-        public string Description;
+        [TextAreaAttribute(1, 5)] public string Description;
         public Sprite Icon;
 
 #if UNITY_EDITOR
