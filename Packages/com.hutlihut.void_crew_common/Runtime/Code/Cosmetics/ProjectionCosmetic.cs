@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace VC.Common.Cosmetics
@@ -6,5 +7,7 @@ namespace VC.Common.Cosmetics
     public class ProjectionCosmetic : VoidCrewCosmetic
     {
         public Texture2D Texture;
+        [SerializeReference, SubclassSelector] public List<ProjectionAnimationModifier> AnimationModifiers = new();
     }
+
 }
