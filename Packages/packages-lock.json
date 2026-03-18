@@ -8,13 +8,6 @@
         "com.unity.render-pipelines.high-definition": "14.0.12"
       }
     },
-    "com.mackysoft.serializereference-extensions": {
-      "version": "1.7.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://package.openupm.com"
-    },
     "com.unity.burst": {
       "version": "1.8.21",
       "depth": 2,
