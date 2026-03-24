@@ -33,7 +33,7 @@ namespace VC.Common.Editor
             }
 
 
-            var name = path.Substring(path.LastIndexOf('/') + 1);
+            var name = path.Substring(path.LastIndexOf('/') + 1) + ".metem";
 
             List<AssetBundleBuild> assetBundleDefinitionList = new();
 
@@ -93,10 +93,15 @@ namespace VC.Common.Editor
             AssetBundleManifest manifest = BuildPipeline.BuildAssetBundles(buildInput);
             if (manifest != null)
             {
+                var projectRelativePath = "";;
                 foreach (var bundleName in manifest.GetAllAssetBundles())
                 {
-                    string projectRelativePath = buildInput.outputPath + "/" + bundleName;
+                    projectRelativePath = buildInput.outputPath + "/" + bundleName;
                     Debug.Log($"Exported AssetBundle: {projectRelativePath}");
+                }
+                if (!string.IsNullOrEmpty(projectRelativePath))
+                {
+                    EditorUtility.RevealInFinder(projectRelativePath);
                 }
             }
             else
