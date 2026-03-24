@@ -28,6 +28,14 @@ namespace VC.Common.Editor.PlayerShip
             CleanOldData();
             Selection.selectionChanged -= OnSelectionChanged;
             Selection.selectionChanged += OnSelectionChanged;
+            ObjectFactory.componentWasAdded -= OnComponentAdded;
+            ObjectFactory.componentWasAdded += OnComponentAdded;
+        }
+
+        private static void OnComponentAdded(Component component)
+        {
+            if (component is PlayerShipVisuals)
+                OnSelectionChanged();
         }
 
         private static void LoadData()
