@@ -7,6 +7,7 @@ namespace VC.Common.CoreData
     {
         Floating = 1 << 0,
         Chest = 1 << 1,
-        LoreTerminal = 1 << 2
+        DataTerminal = 1 << 2,
+        ArmoryExchange = 1 << 3,
     }
 }
