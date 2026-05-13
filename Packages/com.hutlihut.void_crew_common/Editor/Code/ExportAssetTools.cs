@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEditor;
 using UnityEngine;
+using VC.Common.Publishing;
 
 namespace VC.Common.Editor
 {
@@ -9,15 +10,20 @@ namespace VC.Common.Editor
     {
         private const string OUTPUT_PATH = "Exported Assets";
 
-        [MenuItem("Void Crew/Export Selected")]
-        static void BuildBundles()
+        [MenuItem("Void Crew/Export Asset Bundles")]
+        private static void BuildBundles()
+        {
+            BuildBundlesToPath(OUTPUT_PATH);
+        }
+        
+        public static void BuildBundlesToPath(string outputPath)
         {
             var selections = Selection.assetGUIDs;
 
             if (selections.Length != 1)
             {
-                Debug.LogWarning(
-                    "Select a single directory containing the void crew asset all of the dependencies for export");
+                Debug.LogError(
+                    "Select a single directory containing the void crew assets and all of the dependencies for export");
                 return;
             }
 
@@ -27,8 +33,8 @@ namespace VC.Common.Editor
             bool isFolder = AssetDatabase.IsValidFolder(path);
             if (!isFolder)
             {
-                Debug.LogWarning(
-                    "Select a single directory containing the void crew asset all of the dependencies for export");
+                Debug.LogError(
+                    "Select a single directory containing the void crew assets and all of the dependencies for export");
                 return;
             }
 
@@ -78,14 +84,14 @@ namespace VC.Common.Editor
             ab.assetNames = files.ToArray();
             assetBundleDefinitionList.Add(ab);
 
-            if (!Directory.Exists(OUTPUT_PATH))
-                Directory.CreateDirectory(OUTPUT_PATH);
+            if (!Directory.Exists(outputPath))
+                Directory.CreateDirectory(outputPath);
 
             Debug.Log($"Exporting files:\n{string.Join("\n", files)}");
 
             BuildAssetBundlesParameters buildInput = new()
             {
-                outputPath = OUTPUT_PATH,
+                outputPath = outputPath,
                 options = BuildAssetBundleOptions.AssetBundleStripUnityVersion,
                 bundleDefinitions = assetBundleDefinitionList.ToArray()
             };
