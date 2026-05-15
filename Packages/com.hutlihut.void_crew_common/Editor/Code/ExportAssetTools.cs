@@ -10,7 +10,7 @@ namespace VC.Common.Editor
     {
         private const string OUTPUT_PATH = "Exported Assets";
 
-        [MenuItem("Void Crew/Export Asset Bundles")]
+        [MenuItem("Void Crew/Export Asset Bundle")]
         private static void BuildBundles()
         {
             BuildBundlesToPath(OUTPUT_PATH);
