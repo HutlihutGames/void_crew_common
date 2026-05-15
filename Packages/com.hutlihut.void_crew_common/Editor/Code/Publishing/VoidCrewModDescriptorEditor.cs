@@ -74,7 +74,13 @@ namespace VC.Common.Editor.Publishing
                     EditorGUI.indentLevel++;
 
                     EditorGUILayout.PropertyField(entry.FindPropertyRelative("Version"));
-                    EditorGUILayout.PropertyField(entry.FindPropertyRelative("Changes"));
+                    SerializedProperty changes = entry.FindPropertyRelative("Changes");
+
+                    EditorGUILayout.LabelField("Changes");
+
+                    changes.stringValue = EditorGUILayout.TextArea(
+                        changes.stringValue,
+                        GUILayout.MinHeight(80));
 
                     EditorGUI.indentLevel--;
                 }

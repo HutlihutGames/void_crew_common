@@ -74,6 +74,11 @@ namespace VC.Common.Publishing
         }
 
 #if UNITY_EDITOR
+        private void Reset()
+        {
+            OnValidate();
+        }
+
         private void OnValidate()
         {
             AssignDefaultTemplates();
