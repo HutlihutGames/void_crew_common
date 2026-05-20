@@ -14,7 +14,7 @@ namespace VC.Common.Publishing
         private static readonly Regex ModNameRegex = new(@"^[a-zA-Z0-9_]+$");
         
         public string DeveloperName;
-        [Tooltip("Semver, e.g. 1.2.3")]
+        [Tooltip("Use MAJOR.MINOR.PATCH formatting, e.g. 1.2.3")]
         public string ModVersion = "0.1.0";
         
         [Tooltip("Format: Team-Name-Version")]
